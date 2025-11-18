@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <h1 class="heading">DOM 조작</h1>
+  <h1 class="heading red">DOM 조작</h1>
   <a href="https://www.google.com/">google</a>
   <p class="content">content1</p>
   <p class="content">content2</p>
@@ -31,6 +31,7 @@
     const h1Tag = document.querySelector('.heading')
     console.log(h1Tag.classList)
 
+    // 클래스 추가하고 삭제하는 게 가장 많이 쓰임.
     // h1Tag.classList.add('red')
     // console.log(h1Tag.classList)
 
@@ -40,6 +41,7 @@
     // h1Tag.classList.toggle('red')
     // console.log(h1Tag.classList)
 
+    // 일반 속성 조작 메서드는 웬만하면 쓰지 마세요. 클래스로 접근하는 것이 좋습니다.
     // 일반 속성 조작
     const aTag = document.querySelector('a')
     console.log(aTag.getAttribute('href'))
