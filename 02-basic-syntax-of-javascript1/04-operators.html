@@ -76,7 +76,7 @@
 
     /* 단축평가 활용 예시
     1. 단축평가 활용 예시(Positive)
-    let user = null;
+    let user = null; //유저
     const name = user || "Guest"; // user가 Falsy(null)이므로 "Guest"
     console.log(name); // "Guest"
 
@@ -85,7 +85,9 @@
     let currentScore = score || 50; // 0이 Falsy라서 50이 됨 (버그!)
     console.log(currentScore); // 50
 
-    3. 단축평가 활용 예시3(해결책)
+    3. 단축평가 활용 예시3(해결책) =>  지금 하고 싶은 건 default값을 어떻게 설정하느냐 ...
+    // null, undefined 인 경우에는 단축펴악로 default 값을 잘 설정할 수 있는데
+    // 0과 같은 값은 의도하지 않아도 default 값으로 바뀐다! 이게 너무 싫다.
     let score = 0;
     let currentScore;
 
@@ -97,10 +99,11 @@
     console.log(currentScore); // 0 (정상!)
 
     4. 최종(ES2020 도입) Null 병합 연산자 (Nullish Coalescing Operator) ??
+    // 실무에서 엄청 많이 쓸 거에요;.
   
     let score = 0;
     // score가 null이나 undefined가 아니므로(0임), 왼쪽 값(0)을 그대로 사용
-    const currentScore = score ?? 50;
+    const currentScore = score ?? 50; //default 값을 설정해주지 않으면 무조건 터집니다.
     console.log(currentScore); // 0 
 
     let user = null;

@@ -9,6 +9,11 @@
 
 <body>
   <script>
+    // 결국 false => 0, "", null, undefined, NaN 이외의 모든 값은 true로 평가된다.
+    // 암묵적인 변환보다는 명시적인 게 좋다!
+    // if(arr) 보다는 if(arr.length > 0) 이런 식으로
+    // 코드를 읽기 쉽게 짜는 것!
+    // 인기쟁이가 되는 비결이다.. 내가 짠 코드인지도 몰라요 (까먹기에 단 2개월이면 충분합니다.)
     console.log(Boolean(0));  
     console.log(Boolean(10));
     console.log(Boolean(NaN));
